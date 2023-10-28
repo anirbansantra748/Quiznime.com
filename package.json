@@ -1,0 +1,17 @@
+{
+  "name": "quiznime",
+  "version": "1.0.0",
+  "description": "\"Explore the world of anime through engaging quizzes on our Anime Quiz Hub.\"",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "mongoose": "^7.6.3"
+  }
+}
