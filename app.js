@@ -12,10 +12,12 @@ const mongo_url = "mongodb://127.0.0.1:27017/wanderlust";
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
+//SECTION - app.use section
+
+
 async function main() {
   await mongoose.connect(mongo_url);
 }
-
 main()
   .then(() => {
     console.log("Mongoose started");
@@ -30,8 +32,9 @@ app.get("/", (req, res) => {
 });
 
 app.get("/quizanime", (req, res) => {
-  res.render("pages/index");
+  res.render("pages/index.ejs");
 });
+
 
 app.listen(port, () => {
   console.log("app is listening");
