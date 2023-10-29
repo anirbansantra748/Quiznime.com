@@ -1,0 +1,90 @@
+body {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: auto;
+	gap: 20px;
+	justify-content: center;
+	align-items: flex-start;
+	height: 100vh;
+	margin: 0;
+	padding: 20px;
+	font-family: Arial, sans-serif;
+	margin: 0;
+	overflow-x: hidden;
+    background-color: bisque;
+}
+
+h1 {
+	grid-column: 1 / -1;
+}
+
+.card {
+	width: calc(60% - 60px);
+	height: 200px;
+	background-color: #4b89c7;
+	border: 1px solid #636f7c;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: box-shadow 0.3s;
+	margin-left: 110px;
+}
+
+.card:hover {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.navbar {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #333;
+	overflow-x: hidden;
+	transition: 0.2s;
+	padding-top: 60px;
+}
+.navbar.active {
+	width: 250px;
+}
+.navbar a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #fff;
+	display: block;
+	transition: 0.5s;
+}
+.navbar a:hover {
+	color: #2d2727;
+}
+.closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+}
+.social-icons {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	padding: 10px 0;
+}
+.social-icons a {
+	color: #426403;
+	padding: 0 10px;
+}
+.menu-icon {
+	color: #060404;
+	font-size: 30px;
+	cursor: pointer;
+	padding: 10px;
+	position: absolute;
+	top: 60px;
+	left: 20px;
+}
