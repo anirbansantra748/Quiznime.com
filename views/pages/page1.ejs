@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <% for(alldata of quizData){ %>
+    <h2><%= alldata.question %></h2>
+    <ul>
+      <% for(option of alldata.options){ %>
+        <li><%= option %></li>
+    <% } %>
+    </ul>
+   <% } %> 
+</body>
+</html>
