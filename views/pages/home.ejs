@@ -1,11 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>home</title>
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+  }
+
+  .bg-image {
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background: -gradient(); */
+    background: linear-gradient(to top left, rgba(206, 5, 69, 0.556) 50%, rgba(56, 56, 222, 0.3) 50%);
+    /* ok eta edited pic ke e kora jabe background */
+    /* Set the background image */
+    /* background-image: url('https://images.unsplash.com/photo-1446329813274-7c9036bd9a1f?auto=format&fit=crop&q=80&w=1770&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); */
+  }
+
+  /* Add some content to the page */
+  .content {
+    position: relative;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #000000;
+  }
+</style>
 </head>
 <body>
-  <h2>lek ekhane</h2>
+
+<div class="bg-image"></div>
+
+<div class="content">
+  <h1>Your Content Goes Here</h1>
+  <p>Add your text or other elements here.</p>
+</div>
+
 </body>
 </html>

@@ -5,7 +5,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    background-image: url('https://i.pinimg.com/originals/15/66/3a/15663a8e46d3f2003ea54e7ea58472ad.jpg');
+  }
+  
+  h1{
+    color: #ffffff;
+  }
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height:50%;
+  }
+
+  .card {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    background-color: #ffffff;
+    color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  .card1 {
+    background-image: url('https://wallpapercave.com/wp/wp6081430.jpg');
+    background-size: cover;
+    background-position: center;
+    /* card e click korle specific quiz e cole jai jano  */
+  }
+
+  .card2 {
+    /* background-image: url('https://wallpapercave.com/wp/wp6081430.jpg'); */
+    background-image: url('https://pbs.twimg.com/media/EziHtTuXIAAAGC5.jpg:large');
+    background-size: cover;
+    background-position: center;
+    /* card e click korle specific quiz e cole jai jano  */
+  }
+</style>
+</head>
 <body>
+  <div>
+    <h1>
+      Choose Your Quiz
+
+    </h1>
+  </div>
+
+<div class="card-container">
+  <div class="card card1">
+    <h3>Charcter From Image</h3>
+    <p>Guess the character's name from the image.</p>
+  </div>
+  <div class="card card2">
+    <h3>Anime name from Charcters</h3>
+    <p>Guess the anime name from the name of the Charcters shown.</p>
+  </div>
+</div>
+
+</body>
+
+
+<!-- <body>
   <% for(alldata of quizData){ %>
     <h2><%= alldata.question %></h2>
     <ul>
@@ -14,5 +82,5 @@
     <% } %>
     </ul>
    <% } %> 
-</body>
+</body> -->
 </html>
