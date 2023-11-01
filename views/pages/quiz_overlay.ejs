@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        body{
+            background-image: url('https://cdn.wallpapersafari.com/37/98/E7YzuN.jpg'); /* Add your background image URL here */
+            background-size: cover;
+            background-attachment: fixed;
+            overflow: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .image-box {
+            width: 500px;
+            height: 500px;
+            /* border: 1px solid rgb(255, 255, 255); */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        .header {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            color: #a8a8a8;
+        }
+        .quiz_no {
+            position: absolute;
+            top: 40px;
+            left: 20px;
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            color: #a8a8a8;
+        }
+        .ques{
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            color: #130808;
+        }
+        .option-boxes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 600px;
+        }
+        .option {
+            width: 200px;
+            height: 50px;
+            border: 1px solid black;
+            border-radius: 2.5%;
+            margin: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            background-color: #a3a3a3;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="header">Anime Characters Quiz</h1>
+    <h3 class="quiz_no">Quiz No: 3/10</h3>
+    <div class="container">
+        <div class="image-box">
+            <img
+                src="https://wallpapers.com/images/hd/naruto-pictures-59j4py5kpauv4mgu.jpg"
+                alt="Sample Image"
+                style="max-width: 100%; max-height: 100%"
+            />
+        </div>
+        <h4 class="ques">
+            What is this charcter name :
+        </h4>
+        <div class="option-boxes">
+            <div class="option">Naruto Uzumaki</div>
+            <div class="option">Monkey D Luffy</div>
+            <div class="option">Son Goku</div>
+            <div class="option">Piccolo</div>
+        </div>
+    </div>
+</body>
+</html>

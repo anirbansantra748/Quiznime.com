@@ -44,6 +44,9 @@ app.get("/quizanime/home", (req, res) => {
   }
   res.render("pages/home.ejs");
 });
+app.get("/quizanime/Quiz1", (req, res) => {
+  res.render("pages/quiz_overlay.ejs");
+});
 
 
 //SECTION - page 1
