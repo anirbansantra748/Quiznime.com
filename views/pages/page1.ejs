@@ -1,86 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-
-<style>
-  body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background-size: cover;
-    background-position: center;
-    background-image: url('https://i.pinimg.com/originals/15/66/3a/15663a8e46d3f2003ea54e7ea58472ad.jpg');
-  }
-  
-  h1{
-    color: #ffffff;
-  }
-  .card-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height:50%;
-  }
-
-  .card {
-    flex: 1;
-    margin: 10px;
-    padding: 20px;
-    background-color: #ffffff;
-    color: #ffffff;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  }
-  .card1 {
-    background-image: url('https://wallpapercave.com/wp/wp6081430.jpg');
-    background-size: cover;
-    background-position: center;
-    /* card e click korle specific quiz e cole jai jano  */
-  }
-
-  .card2 {
-    /* background-image: url('https://wallpapercave.com/wp/wp6081430.jpg'); */
-    background-image: url('https://pbs.twimg.com/media/EziHtTuXIAAAGC5.jpg:large');
-    background-size: cover;
-    background-position: center;
-    /* card e click korle specific quiz e cole jai jano  */
-  }
-</style>
-</head>
-<body>
-  <div>
-    <h1>
-      Choose Your Quiz
-
-    </h1>
-  </div>
-
-<div class="card-container">
-  <div class="card card1">
-    <h3>Charcter From Image</h3>
-    <p>Guess the character's name from the image.</p>
-  </div>
-  <div class="card card2">
-    <h3>Anime name from Charcters</h3>
-    <p>Guess the anime name from the name of the Charcters shown.</p>
-  </div>
-</div>
-
-</body>
-
-
-<!-- <body>
-  <% for(alldata of quizData){ %>
-    <h2><%= alldata.question %></h2>
-    <ul>
-      <% for(option of alldata.options){ %>
-        <li><%= option %></li>
-    <% } %>
-    </ul>
-   <% } %> 
-</body> -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+  </head>
+  <body>
+    <form method="POST" action="/quizanime/page1">
+      <div class="row mt-5 offset-3">
+        <div class="col ">
+          <div class="card p-1" style="width: 30rem;">
+            <img src="<%= question.url %>" class="card-img-top QuestionImg" alt="...">
+            <div class="card-body">
+              <h5>Question no <%= length +1 %>/<%= totalQuestions %></h5>
+              <h5 class="card-title"><%= question.question %></h5>
+              <p class="card-text">your score is = <%= score %></p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <% for(option of question.options){ %>
+                <li>
+                  <label>
+                      <input type="radio" name="userAnswer" value="<%= option %>">
+                      <%= option %>
+                  </label>
+              </li>
+              <% } %>
+            </ul>
+            <button class="btn" type="submit">submit</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </body>
 </html>
