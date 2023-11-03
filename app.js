@@ -5,7 +5,7 @@ const path = require("path");
 const QuizQuestion = require("./models/quiz.js");
 const quizData = require("./init/data.js");
 const session = require("express-session");
-
+const quizData2 = require("./init/data2.js");
 
 //SECTION - variable parts
 const app = express();
@@ -68,7 +68,7 @@ app.get("/quizanime/page1", (req, res) => {
   }
 });
 
-//SECTION - check rout
+//SECTION - check rout 1
 app.post("/quizanime/page1", (req, res) => {
   //user answer
   const userAnswer = req.body.userAnswer;
@@ -79,6 +79,37 @@ app.post("/quizanime/page1", (req, res) => {
   }
   req.session.currQuestion += 1;
   res.redirect("/quizanime/page1");
+});
+
+//SECTION - page 2
+app.get("/quizanime/page2", (req, res) => {
+  if(!req.session.userScore){
+    req.session.userScore = 0;
+    req.session.currQuestion = 0;
+  }
+  let currQuestion = req.session.currQuestion;
+  let userScore = req.session.userScore;
+
+  if(currQuestion < quizData2.data2.length){
+    const question = quizData2.data2[currQuestion];
+    res.render("pages/page2.ejs",{question,score:userScore,length:currQuestion,totalQuestions: quizData2.data2.length});
+  }else {
+    req.session.userScore = 0;
+    req.session.currQuestion = 0;
+    res.send(`Your final score is ${userScore}`);
+  }
+});
+//SECTION - check rout 2
+app.post("/quizanime/page2", (req, res) => {
+  //user answer
+  const userAnswer = req.body.userAnswer;
+  let currQuestion = req.session.currQuestion;
+  //check answer
+  if(userAnswer == quizData2.data2[currQuestion].answer){
+    req.session.userScore += 1;
+  }
+  req.session.currQuestion += 1;
+  res.redirect("/quizanime/page2");
 });
 
 app.listen(port, () => {
