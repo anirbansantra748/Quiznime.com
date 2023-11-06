@@ -1,174 +1,286 @@
 <!DOCTYPE html>
 <html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Choose Your Quiz - QuizMaster</title>
+		<meta
+			name="description"
+			content="Choose your favorite anime quiz and test your knowledge." />
 
-<head>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TnNeoa7Rxnatzjc#DSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      position: relative;
-      background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpaperaccess.com%2Ffull%2F3279992.jpg&f=1&nofb=1&ipt=18bbcced36c04b8e49a9103172760561edda10c5ab34c155a657fc00dba488f4&ipo=images');
-      background-size: cover;
-      background-position: center;
-    }
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-T3c6CoIi6uLrA9TnNeoa7Rxnatzjc#DSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+			crossorigin="anonymous" />
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				text-align: center;
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+				position: relative;
+				background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpaperaccess.com%2Ffull%2F3279992.jpg&f=1&nofb=1&ipt=18bbcced36c04b8e49a9103172760561edda10c5ab34c155a657fc00dba488f4&ipo=images");
+				background-size: cover;
+				background-position: center;
+			}
 
-    iframe {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      pointer-events: none;
-    }
+			iframe {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				z-index: -1;
+				pointer-events: none;
+			}
 
-    .content {
-      background-color: transparent;
-      padding: 20px;
-    }
+			#player {
+				width: 100%;
+				height: 100%;
+			}
+			.main-heading {
+				color: #ff7f00;
+				font-size: 3rem;
+				font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+				text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+				padding: 20px;
+				background-color: rgba(0, 0, 0, 0);
+				border-radius: 10px;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+			}
 
-    .card-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 60px;
-    }
+			.content {
+				background-color: transparent;
+				padding: 20px;
+				margin-top: 0;
+			}
 
-    .card {
-      width: 250px;
-      height: 350px;
-      background-color: transparent;
-      color: #333;
-      border: 1px solid #ddd;
-      border-radius: 15px;
-      margin: 50px;
-      padding: 10px;
-      text-align: center;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-      transition: transform 0.2s;
-      transform: skewX(-10deg);
-      position: relative;
-      overflow: hidden;
-    }
-    .card:hover{
-      box-shadow: 7px 7px rgb(255, 255, 255);
-    }
+			.card-container {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-top: 60px;
+			}
 
-    .card1 {
-      background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpaperaccess.com%2Ffull%2F3279992.jpg&f=1&nofb=1&ipt=18bbcced36c04b8e49a9103172760561edda10c5ab34c155a657fc00dba488f4&ipo=images');
-      background-size: cover;
-      background-position: center;
-    }
+			.card {
+				width: 250px;
+				height: 350px;
+				background-color: transparent;
+				color: #fff;
+				border: 1px solid transparent;
+				border-radius: 15px;
+				margin: 50px;
+				padding: 10px;
+				text-align: center;
+				box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+				transition: transform 0.4s, box-shadow 0.4s;
+				position: relative;
+				overflow: hidden;
+			}
 
-    .card2 {
-      background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.Xyv_zP-OInf8t6ubgWF7eQHaGO%26pid%3DApi&f=1&ipt=a101251890fa157277739036bfc39e41666aa8539c9cfd979ba2e4452a8ecfac&ipo=images');
-      background-size: cover;
-      background-position: center;
-    }
+			.card:hover {
+				transform: scale(1.05);
+				box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+			}
 
-    .card:hover {
-      transform: skewX(-10deg) scale(1.05);
-    }
+			.card1 {
+				background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpaperaccess.com%2Ffull%2F3279992.jpg&f=1&nofb=1&ipt=18bbcced36c04b8e49a9103172760561edda10c5ab34c155a657fc00dba488f4&ipo=images");
+				background-size: cover;
+				background-position: center;
+			}
 
-    .card h3 {
-      font-size: 20px;
-      color: transparent;
-    }
+			.card2 {
+				background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.Xyv_zP-OInf8t6ubgWF7eQHaGO%26pid%3DApi&f=1&ipt=a101251890fa157277739036bfc39e41666aa8539c9cfd979ba2e4452a8ecfac&ipo=images");
+				background-size: cover;
+				background-position: center;
+			}
 
-    a {
-      text-decoration: none;
-      color: #333;
-    }
+			.card:hover {
+				transform: skewX(-10deg) scale(1.05);
+			}
 
-    .card-content {
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      background-color: rgba(0, 0, 0, 0.4);
-      padding: 20px;
-    }
+			.card h3 {
+				font-size: 20px;
+				color: transparent;
+			}
 
-    .card-button {
-      background-color: #FFA500;
-      color: white;
-      border: none;
-      padding: 10px;
-      border-radius: 10px;
-      cursor: pointer;
-      font-size: 18px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: background-color 0.3s;
-    }
+			a {
+				text-decoration: none;
+				color: #333;
+			}
+			.footer {
+				position: fixed;
+				bottom: 10px;
+				left: 10px;
+				z-index: 1;
+			}
 
-    .card-button:hover {
-      background-color: #FF7F00;
-    }
+			.footer a {
+				display: flex;
+				align-items: center;
+				text-decoration: none;
+				color: #fff;
+			}
 
-    .arrow-icon {
-      width: 20px;
-      height: 20px;
-      margin-left: 10px;
-      fill: white; /* Set the fill color for the SVG icon */
-    }
+			.footer img {
+				width: 30px;
+				height: 30px;
+				margin-right: 10px;
+			}
 
-    h1 {
-      color: white;
-      font-size: 77px;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-      padding: 20px;
-      background-color: rgba(0, 0, 0, 0.4);
-      border-radius: 10px;
-    }
-  </style>
-</head>
+			.card-content {
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				background-color: rgba(0, 0, 0, 0.4);
+				padding: 20px;
+			}
 
-<body>
-  <iframe width="100%" height="56.25vw" src="https://www.youtube.com/embed/k_CxMefC7mA?autoplay=1&mute=1&vq=4k&loop=1&start=4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen controls="0"></iframe>
+			.card-button {
+				background-color: #ffa500;
+				color: white;
+				border: none;
+				padding: 10px;
+				border-radius: 10px;
+				cursor: pointer;
+				font-size: 18px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				transition: background-color 0.3s, transform 0.3s;
+			}
 
-  <div class="content">
-    <h1>Choose Your Quiz</h1>
-    <div class="card-container">
-      <a href="/quizanime/page1">
-        <div class="card card1">
-          <div class="card-content">
-            <h3>Character From Image</h3>
-            <button class="card-button">Start Quiz
-              <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-arrow-right" viewBox="0 0 16 16">
-                <path
-                  d="M11.354 4.354a.5.5 0 0 1 0 .708L9.207 7H2.5a.5.5 0 0 1 0-1h6.707l2.147-2.146a.5.5 0 0 1 .708 0z" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </a>
+			.card-button:hover {
+				background-color: #ff7f00;
+				transform: scale(1.1);
+			}
 
-      <a href="/quizanime/page2">
-        <div class="card card2">
-          <div class="card-content">
-            <h3>Anime name from Characters</h3>
-            <button class="card-button">Start Quiz
-              <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-arrow-right" viewBox="0 0 16 16">
-                <path
-                  d="M11.354 4.354a.5.5 0 0 1 0 .708L9.207 7H2.5a.5.5 0 0 1 0-1h6.707l2.147-2.146a.5.5 0 0 1 .708 0z" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </a>
-    </div>
-  </div>
-</body>
+			.arrow-icon {
+				width: 20px;
+				height: 20px;
+				margin-left: 10px;
+				fill: white; /* Set the fill color for the SVG icon */
+			}
+
+			h1 {
+				color: #fff;
+				font-size: 3rem;
+				font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+				text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+				padding: 20px;
+				background-color: rgba(0, 0, 0, 0.7);
+				border-radius: 10px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!-- <iframe
+			width="100%"
+			height="56.25vw"
+			src="https://www.youtube.com/embed/k_CxMefC7mA?autoplay=1&mute=1&vq=4k&loop=1&start=4"
+			title="YouTube video player"
+			frameborder="0"
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+			allowfullscreen
+			controls="0">
+    </iframe> -->
+		<div id="player"></div>
+		<div class="content">
+			<h1 class="main-heading">Choose Your Quiz</h1>
+			<div class="card-container">
+				<a href="/quizanime/page1">
+					<div class="card card1">
+						<div class="card-content">
+							<h3>Character From Image</h3>
+							<button class="card-button">
+								Start Quiz
+								<svg
+									class="arrow-icon"
+									xmlns="http://www.w3.org/2000/svg"
+									width="16"
+									height="16"
+									fill="currentColor"
+									class="bi bi-arrow-right"
+									viewBox="0 0 16 16">
+									<path
+										d="M11.354 4.354a.5.5 0 0 1 0 .708L9.207 7H2.5a.5.5 0 0 1 0-1h6.707l2.147-2.146a.5.5 0 0 1 .708 0z" />
+								</svg>
+							</button>
+						</div>
+					</div>
+				</a>
+
+				<a href="/quizanime/page2">
+					<div class="card card2">
+						<div class="card-content">
+							<h3>Anime name from Characters</h3>
+							<button class="card-button">
+								Start Quiz
+								<svg
+									class="arrow-icon"
+									xmlns="http://www.w3.org/2000/svg"
+									width="16"
+									height="16"
+									fill="currentColor"
+									class="bi bi-arrow-right"
+									viewBox="0 0 16 16">
+									<path
+										d="M11.354 4.354a.5.5 0 0 1 0 .708L9.207 7H2.5a.5.5 0 0 1 0-1h6.707l2.147-2.146a.5.5 0 0 1 .708 0z" />
+								</svg>
+							</button>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		<footer class="footer">
+			<a
+				href="https://www.youtube.com/watch?v=V_MX0HiIgRQ"
+				target="_blank">
+				<img
+					src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4yLpMDVXF1uwVj7yorM0kmbW1rIGROqpweA&usqp=CAU"
+					alt="Youtube"
+					style="width: 30px; height: 30px" />
+			</a>
+		</footer>
+	</body>
+	<script>
+		var player;
+		function onYouTubeIframeAPIReady() {
+			player = new YT.Player("player", {
+				height: "100%",
+				width: "100%",
+				videoId: "V_MX0HiIgRQ", // Replace with your actual video ID
+				playerVars: {
+					autoplay: 1,
+					controls: 0,
+					loop: 1,
+					start: 27, // Replace with the start time in seconds
+					end: 192, // Replace with the end time in seconds
+					playlist: "V_MX0HiIgRQ", // Replace with your actual video ID
+					modestbranding: 1,
+					showinfo: 0,
+					fs: 0,
+					cc_load_policy: 0,
+					iv_load_policy: 3,
+					autohide: 0,
+					rel: 0,
+					suggestedQuality: "hd720",
+				},
+				events: {
+					onReady: onPlayerReady,
+				},
+			});
+		}
+
+		function onPlayerReady(event) {
+			event.target.mute(); // Mute the video
+			event.target.playVideo(); // Start playing the video
+		}
+	</script>
+	<script src="https://www.youtube.com/iframe_api"></script>
 </html>
-
-
