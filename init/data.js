@@ -59,6 +59,102 @@ const questions = [
     answer: 'World domination',
     url: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fanimecorner.me%2Fwp-content%2Fuploads%2F2021%2F08%2Flove-after-world-domination-teaser-pv.png&f=1&nofb=1&ipt=964465d2b827f863e35a42ef2eba22dad067b0d12fbc4afa1e0784d24479fbbe&ipo=images",
   },
+  {
+    question: 'What is the name of the powerful wizard in "Fairy Tail" who specializes in Dragon Slayer Magic?',
+    options: ['Erza Scarlet', 'Gray Fullbuster', 'Lucy Heartfilia', 'Natsu Dragneel'],
+    answer: 'Natsu Dragneel',
+    url: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F2.bp.blogspot.com%2F-F51NMHPfXAM%2FWXIZ65tonDI%2FAAAAAAAAQsM%2FDhUWg2uK9VEpXkahwzHJnK96vGSEO41XACLcBGAs%2Fs1600%2Fqs7saumuwlhx.jpg&f=1&nofb=1&ipt=86c7aa70677b7f15a0217e296f760bd0258b19757dd0c86d603d8e677c6f91c9&ipo=images",
+  },
+  {
+    question: 'In "Dragon Ball Z," who is the Saiyan prince and one of the main characters?',
+    options: ['Krillin', 'Piccolo', 'Vegeta', 'Goku'],
+    answer: 'Vegeta',
+    url: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.wikia.nocookie.net%2Fdragonball%2Fimages%2F4%2F4b%2FGoku_Son_GT.png&f=1&nofb=1&ipt=f0911c06e72721c3d262a56b0edf60d5755563f5c184b57d42b83907cbdd2bda&ipo=images",
+  },
+  {
+    question: 'What is the name of the ancient martial art style in "Dragon Ball" that Goku and his friends practice?',
+    options: ['Judo', 'Karate', 'Kung Fu', 'Kaio-ken'],
+    answer: 'Kung Fu',
+    url: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages7.alphacoders.com%2F457%2F457114.jpg&f=1&nofb=1&ipt=34b4160ea590a775ef5b92d22d0778f5bb7553bb4cb01e39d2b6d7bb3e5bdc16&ipo=images",
+  },
+  {
+    question: 'In "My Hero Academia," what is All Might\'s quirk?',
+    options: ['Explosion', 'Teleportation', 'Super Strength', 'One For All'],
+    answer: 'One For All',
+    url: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.pngfind.com%2Fpngs%2Fm%2F110-1100249_my-hero-academia-season-3-anime-shoto-todoroki.png&f=1&nofb=1&ipt=4f0ea7766a19b00423075e18a3e53f645a6efc1b3dcdcc674c72926c7c162d1a&ipo=images",
+  },
+  {
+    question: 'In "Bleach," what is the name of the Soul Reaper protagonist who gains the powers of a Hollow?',
+    options: ['Rukia Kuchiki', 'Uryu Ishida', 'Ichigo Kurosaki', 'Orihime Inoue'],
+    answer: 'Ichigo Kurosaki',
+    url: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.wikia.nocookie.net%2Fbleach%2Fimages%2F2%2F20%2FIchigo_Kurosaki.png&f=1&nofb=1&ipt=76abceca6c55a5c51b58ff264a0a89c76cbfe888dd0e0af9be7e2c14d3d129ed&ipo=images",
+  },
+  {
+    question: 'What is the name of the magical world where wizards use "Nen" abilities in "Hunter x Hunter"?',
+    options: ['Wizarding World', 'Nenverse', 'Hunter World', 'Nen World'],
+    answer: 'Nen World',
+    url: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.wikia.nocookie.net%2Fhunterxhunter%2Fimages%2F1%2F13%2FHisoka_Madhouse.png&f=1&nofb=1&ipt=22b6076dd46d37ef5b16696020f77c40b5f0d7d21fc1a2e7e5d05540b178c1cb3&ipo=images",
+  },
+  {
+    question: 'What is the name of the alternative Tokyo where ghouls live in "Tokyo Ghoul"?',
+    options: ['Human City', 'Tokyo-2', 'Anteiku', 'Ward 20'],
+    answer: 'Anteiku',
+    url: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fvignette.wikia.nocookie.net%2Ftokyoghoul%2Fimages%2F5%2F56%2FTouka_TG_%282%29.jpg&f=1&nofb=1&ipt=08652c1fbde4f6e4cc1eab59f5b0577d6fb1411f53ce792ff7eab83fcce743ac3&ipo=images",
+  },
+  {
+    question: 'What is the mysterious book in "Death Note" that allows its user to kill anyone whose name is written in it?',
+    options: ['Grimoire', 'Dark Tome', 'Death Note', 'Fatal Script'],
+    answer: 'Death Note',
+    url: "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimages6.fanpop.com%2Fimage%2Fphotos%2F35700000%2FLight-Yagami-death-note-35716957-1440-900.jpg&f=1&nofb=1&ipt=f358a4dec97f07eabcc31e254d4fdc551c07f1b3b6bc313ec1b6fb0f0d7cb8ba&ipo=images",
+  },
+  {
+    question: 'In "Demon Slayer," what is the main character Tanjiro Kamados primary goal?',
+    options: ['To become the strongest demon', 'To find the cure for his sister', 'To avenge his family', 'To join the Demon Slayer Corps'],
+    answer: 'To find the cure for his sister',
+    url: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.skyscanner.net%2Fassets%2Fbaby-kamado-tanjiro.jpg&f=1&nofb=1&ipt=f71276e84f08ff59655f33dfadea8a93d9ad51c8e04ef2ef8531e596ffdb9659&ipo=images",
+  },
+  {
+    question: 'Which anime series revolves around a group of assassins trying to kill the ruthless and sadistic Koro-sensei?',
+    options: ['Black Clover', 'Assassination Classroom', 'Noragami', 'Parasyte -the maxim-'],
+    answer: 'Assassination Classroom',
+    url: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.pngitem.com%2Fpimgs%2Fu%2F502-5026754_ansatsu-kyoushitsu-assassination-classroom-assassination-classroom-koro-sensei.png&f=1&nofb=1&ipt=130e8b2e54fdd70dd82d96f536f01d6cc2ee1a8d10a159d11c6f89f8e933ea93&ipo=images",
+  },
+  {
+    question: 'In "One Punch Man," what is Saitama s superhero name?',
+    options: ['Baldy Hero', 'Caped Baldy', 'One Punch Hero', 'Bald Fist'],
+    answer: 'Caped Baldy',
+    url: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.nawpic.com%2Fmedia%2F2020%2Fone-punch-man-nawpic-11.jpg&f=1&nofb=1&ipt=b5c97cca1e7b1ba891c29fde5dd825e05d3f7f735ec5e4ef838f95226962d8b3&ipo=images",
+  },
+  {
+    question: 'In "Attack on Titan," what is the name of the last bastion of humanity against the Titans?',
+    options: ['Marley', 'Walls Maria, Rose, and Sheena', 'Eldia', 'Survey Corps'],
+    answer: 'Walls Maria, Rose, and Sheena',
+    url: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages7.alphacoders.com%2F757%2F757109.jpg&f=1&nofb=1&ipt=e037390e9a9a3537364358f8a0ab1f448bdc469d31ea5f0f990ce506eef2265b&ipo=images",
+  },
+  {
+    question: 'In "Fullmetal Alchemist," what is the name of the forbidden ritual used by the Elric brothers to try to bring their mother back to life?',
+    options: ['Transmutation Circle', 'Human Transmutation', 'Alchemy Resurrection', 'Soul Fusion'],
+    answer: 'Human Transmutation',
+    url: "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimages6.fanpop.com%2Fimage%2Fphotos%2F36600000%2FFull-Metal-Alchemist-image-full-metal-alchemist-36621492-4845-3263.jpg&f=1&nofb=1&ipt=da45a66eb38400f6e15063b5bdfcd5615868ad2a9cdf2dd312582bf9c08ecf3a&ipo=images",
+  },
+  {
+    question: 'What is the name of the elite school for witches where Atsuko Kagari, Sucy Manbavaran, and Lotte Jansson study in "Little Witch Academia"?',
+    options: ['Hogwarts School of Witchcraft and Wizardry', 'Luna Nova Magical Academy', 'Sorcerers Institute', 'Witchcraft and Wizardry Academy'],
+    answer: 'Luna Nova Magical Academy',
+    url: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages2.fanpop.com%2Fimage%2Fphotos%2F12400000%2FLittle-Witch-Academia-little-witch-academia-12430495-1000-1380.png&f=1&nofb=1&ipt=27bfb9e77117e89a31b7f4f195f07d0b671754bedf4051f051da672dd05b52a9&ipo=images",
+  },
+  {
+    question: 'In "Neon Genesis Evangelion," what are the giant bio-mechanical beings that humanity must fight against?',
+    options: ['Angels', 'Demons', 'Titans', 'Kaiju'],
+    answer: 'Angels',
+    url: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages8.alphacoders.com%2F757%2F757096.jpg&f=1&nofb=1&ipt=3e4e8e1f5c581cedc59ab864bcf8ae9e535b2e88d2e7af52c9a235931429fa5d&ipo=images",
+  },
+  {
+    question: 'In "My Neighbor Totoro," what is the name of the mythical forest spirit that Mei and Satsuki encounter?',
+    options: ['Kodama', 'Totoro', 'No-Face', 'Haku'],
+    answer: 'Totoro',
+    url: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.pngfind.com%2Fpngs%2Fu%2F143-1436316_totoro-sticker-my-neighbor-totoro-totoro-pixel-art.png&f=1&nofb=1&ipt=3e1989b63c6c9b5ff9b8e5c3b2a001ab2c078f3f858408328a5c2b1408749eb7&ipo=images",
+  },
 ];
 
 module.exports = { data: questions };
