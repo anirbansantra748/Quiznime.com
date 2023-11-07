@@ -29,55 +29,5 @@ const images = [
     options: ['Killua Zoldyck', 'Gon Freecss', 'Hisoka', 'Leorio'],
     answer: "Gon Freecss",
   },
-  {
-    url: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fvignette.wikia.nocookie.net%2Ftokyoghoul%2Fimages%2F0%2F01%2FKaneki_Re%2_3.jpg&f=1&nofb=1&ipt=3461b5c460194dd11f6be8a60b163f00db0d400cc5986d1d40a3038c86c2bdf94&ipo=images",
-    options: ['Touka Kirishima', 'Ken Kaneki', 'Haise Sasaki', 'Rize Kamishiro'],
-    answer: "Ken Kaneki",
-  },
-  {
-    url: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.wikia.nocookie.net%2Fattackontitan%2Fimages%2F0%2F01%2FEren_Yeager_%28Anime%29_character_image.png&f=1&nofb=1&ipt=b44ee174d16969f5d7ccf17be31650ab1311046c4a5879a6c374c34b6a4c86d1&ipo=images",
-    options: ['Mikasa Ackerman', 'Armin Arlert', 'Levi Ackerman', 'Eren Yeager'],
-    answer: "Eren Yeager",
-  },
-  {
-    url: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.wikia.nocookie.net%2Ffairytail%2Fimages%2F0%2F02%2FNatsu_Dragneel_%28anime%29.png&f=1&nofb=1&ipt=8a4f9bb383f0bebd93c8649130c4156e4d7e44cc8ec703ff473f31797ef6dddb&ipo=images",
-    options: ['Gray Fullbuster', 'Lucy Heartfilia', 'Erza Scarlet', 'Natsu Dragneel'],
-    answer: "Natsu Dragneel",
-  },
-  {
-    url: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.wikia.nocookie.net%2Fonepiece%2Fimages%2F1%2F1e%2FShanks_Anime_Post_Timeskip_Infobox.png&f=1&nofb=1&ipt=0119c81650b1a3f8e3a4e3e75b30914153a81301cc812e8ca21652b981d48d11b&ipo=images",
-    options: ['Blackbeard', 'Red-Haired Shanks', 'Kaido', 'Whitebeard'],
-    answer: "Red-Haired Shanks",
-  },
-  {
-    url: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.wikia.nocookie.net%2Fdragonball%2Fimages%2F4%2F4b%2FGoku_Son_GT.png&f=1&nofb=1&ipt=f0911c06e72721c3d262a56b0edf60d5755563f5c184b57d42b83907cbdd2bda&ipo=images",
-    options: ['Goku Black', 'Vegeta', 'Goku (GT)', 'Frieza'],
-    answer: "Goku (GT)",
-  },
-  {
-    url: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.wikia.nocookie.net%2Fmyheroacademia%2Fimages%2F0%2F05%2FShoto_Todoroki_%28Anime%29.png&f=1&nofb=1&ipt=a2ad37be5ed1240d6ea997b2f82b6d4f86dcb495bea1391774dd8535d6e048b4&ipo=images",
-    options: ['Ochaco Uraraka', 'Shoto Todoroki', 'Tenya Iida', 'Katsuki Bakugo'],
-    answer: "Shoto Todoroki",
-  },
-  {
-    url: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.wikia.nocookie.net%2Fnaruto%2Fimages%2F1%2F18%2FSasuke_Part_1.png&f=1&nofb=1&ipt=8f5349dfec1b27197f61ac6aa4fbc6d7d6da9f44cc4d3b7f250a04b77b36f46a&ipo=images",
-    options: ['Naruto Uzumaki', 'Kakashi Hatake', 'Sasuke Uchiha', 'Sakura Haruno'],
-    answer: "Sasuke Uchiha",
-  },
-  {
-    url: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.wikia.nocookie.net%2Fhunterxhunter%2Fimages%2F1%2F13%2FHisoka_Madhouse.png&f=1&nofb=1&ipt=22b6076dd46d37ef5b16696020f77c40b5f0d7d21fc1a2e7e5d05540b178c1cb3&ipo=images",
-    options: ['Gon Freecss', 'Killua Zoldyck', 'Hisoka', 'Leorio'],
-    answer: "Hisoka",
-  },
-  {
-    url: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fvignette.wikia.nocookie.net%2Ftokyoghoul%2Fimages%2F5%2F56%2FTouka_TG_%282%29.jpg&f=1&nofb=1&ipt=08652c1fbde4f6e4cc1eab59f5b0577d6fb1411f53ce792ff7eab83fcce743ac3&ipo=images",
-    options: ['Touka Kirishima', 'Ken Kaneki', 'Haise Sasaki', 'Rize Kamishiro'],
-    answer: "Touka Kirishima",
-  },
-  {
-    url: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.wikia.nocookie.net%2Fattackontitan%2Fimages%2F4%2F48%2FLevi_Ackerman_%28Anime%29_character_image.png&f=1&nofb=1&ipt=3f78a0b5a2f6728c542f843d86a465b07cc2ab31e62b429b3ec41f83930942312&ipo=images",
-    options: ['Mikasa Ackerman', 'Armin Arlert', 'Levi Ackerman', 'Eren Yeager'],
-    answer: "Levi Ackerman",
-  },
 ];
 module.exports = { data2: images };
