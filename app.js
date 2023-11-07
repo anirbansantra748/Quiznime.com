@@ -36,6 +36,9 @@ main()
 app.get("/quizanime", (req, res) => {
   res.render("pages/index.ejs");
 });
+app.get("/quizanime/res", (req, res) => {
+  res.render("pages/result.ejs");
+});
 
 app.get("/quizanime/home", (req, res) => {
   if(req.session.userScore){

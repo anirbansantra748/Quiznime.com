@@ -174,20 +174,23 @@
 				background-color: rgba(0, 0, 0, 0.7);
 				border-radius: 10px;
 			}
+			.page {
+				position: absolute;
+				width: 100%;
+				transition: transform 0.5s;
+			}
+
+			.page.slide-in {
+				transform: translateX(0);
+			}
+
+			.page.slide-out {
+				transform: translateX(-100%);
+			}
 		</style>
 	</head>
 
 	<body>
-		<!-- <iframe
-			width="100%"
-			height="56.25vw"
-			src="https://www.youtube.com/embed/k_CxMefC7mA?autoplay=1&mute=1&vq=4k&loop=1&start=4"
-			title="YouTube video player"
-			frameborder="0"
-			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-			allowfullscreen
-			controls="0">
-    </iframe> -->
 		<div id="player"></div>
 		<div class="content">
 			<h1 class="main-heading">Choose Your Quiz</h1>
@@ -196,20 +199,7 @@
 					<div class="card card1">
 						<div class="card-content">
 							<h3>Character From Image</h3>
-							<button class="card-button">
-								Start Quiz
-								<svg
-									class="arrow-icon"
-									xmlns="http://www.w3.org/2000/svg"
-									width="16"
-									height="16"
-									fill="currentColor"
-									class="bi bi-arrow-right"
-									viewBox="0 0 16 16">
-									<path
-										d="M11.354 4.354a.5.5 0 0 1 0 .708L9.207 7H2.5a.5.5 0 0 1 0-1h6.707l2.147-2.146a.5.5 0 0 1 .708 0z" />
-								</svg>
-							</button>
+							<button class="card-button">Start Quiz</button>
 						</div>
 					</div>
 				</a>
@@ -218,20 +208,7 @@
 					<div class="card card2">
 						<div class="card-content">
 							<h3>Anime name from Characters</h3>
-							<button class="card-button">
-								Start Quiz
-								<svg
-									class="arrow-icon"
-									xmlns="http://www.w3.org/2000/svg"
-									width="16"
-									height="16"
-									fill="currentColor"
-									class="bi bi-arrow-right"
-									viewBox="0 0 16 16">
-									<path
-										d="M11.354 4.354a.5.5 0 0 1 0 .708L9.207 7H2.5a.5.5 0 0 1 0-1h6.707l2.147-2.146a.5.5 0 0 1 .708 0z" />
-								</svg>
-							</button>
+							<button class="card-button">Start Quiz</button>
 						</div>
 					</div>
 				</a>
@@ -281,6 +258,7 @@
 			event.target.mute(); // Mute the video
 			event.target.playVideo(); // Start playing the video
 		}
+		
 	</script>
 	<script src="https://www.youtube.com/iframe_api"></script>
 </html>
