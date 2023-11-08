@@ -1,61 +1,58 @@
 <!DOCTYPE html>
 <html>
-<head>
-<style>
-body {
-  font-family: Arial, sans-serif;
-  background-color: bisque;
-}
+  <head>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: bisque;
+      }
 
-.container {
-  width: 50%;
-  margin: 0 auto;
-  text-align: center;
-  background-color: rgba(248, 226, 34, 0.827);
-  padding: 20px;
-  border-radius: 10px;
-  margin-top: 50px;
-}
+      .container {
+        width: 50%;
+        margin: 0 auto;
+        text-align: center;
+        background-color: rgba(248, 226, 34, 0.827);
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 50px;
+      }
 
-h1 {
-  color: #333;
-}
+      h1 {
+        color: #333;
+      }
 
-.result {
-  font-size: 24px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
+      .result {
+        font-size: 24px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
 
-.button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #ff7f00;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  margin-top: 20px;
-}
+      .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #ff7f00;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 20px;
+      }
 
-.button:hover {
-  background-color: #45a049;
-}
-
-</style>
-</head>
-<body>
-
-<div class="container">
-  <h1>Quiz Result</h1>
-  <div class="result">
-    Congratulations! You have completed the quiz.
-</div>
-<div>
-      Your Score:x/10
-
-  </div>
-  <a href="http://localhost:3000/quizanime/home" class="button">Take Another Quiz</a>
-</div>
-
-</body>
+      .button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Quiz Result</h1>
+      <div class="result">Congratulations! You have completed the quiz.</div>
+      <div>
+        <p>Your Score: <%= userScore %>/10</p>
+        <p>High Score: <%= highScore %></p>
+      </div>
+      <a href="http://localhost:3000/quizanime/home" class="button"
+        >Take Another Quiz</a
+      >
+    </div>
+  </body>
 </html>

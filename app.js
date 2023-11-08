@@ -1,25 +1,22 @@
-//SECTION - requirment part
 const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
-const QuizQuestion = require("./models/quiz.js");
-const quizData = require("./init/data.js");
 const session = require("express-session");
+const quizData = require("./init/data.js");
 const quizData2 = require("./init/data2.js");
 
-//SECTION - variable parts
 const app = express();
 const port = 3000;
 const mongo_url = "mongodb://127.0.0.1:27017/Quizanime";
 
-//SECTION - set up all
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
-//add the public folder to save css file
 
-//SECTION - app.use section
 app.use(express.urlencoded({ extended: true }));
-app.use(session({ secret: "mysecret", resave: false, saveUninitialized: true }));
+app.use(
+  session({ secret: "mysecret", resave: false, saveUninitialized: true })
+);
+
 async function main() {
   await mongoose.connect(mongo_url);
 }
@@ -31,53 +28,63 @@ main()
     console.log(err);
   });
 
-//SECTION - route handling
+// Initialize high score to 0 in the session
+app.use((req, res, next) => {
+  if (!req.session.highScore) {
+    req.session.highScore = 0;
+  }
+  next();
+});
 
 app.get("/quizanime", (req, res) => {
   res.render("pages/index.ejs");
 });
-app.get("/quizanime/res", (req, res) => {
-  res.render("pages/result.ejs");
-});
 
 app.get("/quizanime/home", (req, res) => {
-  if(req.session.userScore){
+  if (req.session.userScore) {
     req.session.userScore = 0;
     req.session.currQuestion = 0;
   }
   res.render("pages/home.ejs");
 });
+
 app.get("/quizanime/Quiz1", (req, res) => {
   res.render("pages/quiz_overlay.ejs");
 });
 
+app.get("/quizanime/result", (req, res) => {
+  const userScore = req.session.userScore;
+  const highScore = req.session.highScore;
+  req.session.highScore = Math.max(userScore, highScore); // Update the high score
+  res.render("pages/result.ejs", { userScore, highScore });
+});
 
-//SECTION - page 1
 app.get("/quizanime/page1", (req, res) => {
-  if(!req.session.userScore){
+  if (!req.session.userScore) {
     req.session.userScore = 0;
     req.session.currQuestion = 0;
   }
-  let currQuestion = req.session.currQuestion;
-  let userScore = req.session.userScore;
+  const currQuestion = req.session.currQuestion;
+  const userScore = req.session.userScore;
 
-  if(currQuestion < quizData.data.length){
+  if (currQuestion < quizData.data.length) {
     const question = quizData.data[currQuestion];
-    res.render("pages/page1.ejs",{question,score:userScore,length:currQuestion,totalQuestions: quizData.data.length});
-  }else {
-    req.session.userScore = 0;
-    req.session.currQuestion = 0;
-    res.send(`Your final score is ${userScore}`);
+    res.render("pages/page1.ejs", {
+      question,
+      score: userScore,
+      length: currQuestion,
+      totalQuestions: quizData.data.length,
+    });
+  } else {
+    res.redirect("/quizanime/result");
   }
 });
 
-//SECTION - check rout 1
 app.post("/quizanime/page1", (req, res) => {
-  //user answer
   const userAnswer = req.body.userAnswer;
-  let currQuestion = req.session.currQuestion;
-  //check answer
-  if(userAnswer == quizData.data[currQuestion].answer){
+  const currQuestion = req.session.currQuestion;
+
+  if (userAnswer == quizData.data[currQuestion].answer) {
     req.session.userScore += 1;
   }
   req.session.currQuestion += 1;
@@ -86,29 +93,31 @@ app.post("/quizanime/page1", (req, res) => {
 
 //SECTION - page 2
 app.get("/quizanime/page2", (req, res) => {
-  if(!req.session.userScore){
+  if (!req.session.userScore) {
     req.session.userScore = 0;
     req.session.currQuestion = 0;
   }
-  let currQuestion = req.session.currQuestion;
-  let userScore = req.session.userScore;
+  const currQuestion = req.session.currQuestion;
+  const userScore = req.session.userScore;
 
-  if(currQuestion < quizData2.data2.length){
+  if (currQuestion < quizData2.data2.length) {
     const question = quizData2.data2[currQuestion];
-    res.render("pages/page2.ejs",{question,score:userScore,length:currQuestion,totalQuestions: quizData2.data2.length});
-  }else {
-    req.session.userScore = 0;
-    req.session.currQuestion = 0;
-    res.send(`Your final score is ${userScore}`);
+    res.render("pages/page2.ejs", {
+      question,
+      score: userScore,
+      length: currQuestion,
+      totalQuestions: quizData2.data2.length,
+    });
+  } else {
+    res.redirect("/quizanime/result");
   }
 });
-//SECTION - check rout 2
+
 app.post("/quizanime/page2", (req, res) => {
-  //user answer
   const userAnswer = req.body.userAnswer;
-  let currQuestion = req.session.currQuestion;
-  //check answer
-  if(userAnswer == quizData2.data2[currQuestion].answer){
+  const currQuestion = req.session.currQuestion;
+
+  if (userAnswer == quizData2.data2[currQuestion].answer ) {
     req.session.userScore += 1;
   }
   req.session.currQuestion += 1;
@@ -116,5 +125,5 @@ app.post("/quizanime/page2", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log("app is listening");
+  console.log("App is listening on port " + port);
 });
