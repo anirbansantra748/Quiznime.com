@@ -187,6 +187,11 @@
 			.page.slide-out {
 				transform: translateX(-100%);
 			}
+			/* #hover-message {
+				width: 10px;
+				height: 10px;
+				background-color: lightblue;
+			} */
 		</style>
 	</head>
 
@@ -215,14 +220,15 @@
 			</div>
 		</div>
 		<footer class="footer">
-			<a
-				href="https://www.youtube.com/watch?v=V_MX0HiIgRQ"
-				target="_blank">
-				<img
-					src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4yLpMDVXF1uwVj7yorM0kmbW1rIGROqpweA&usqp=CAU"
-					alt="Youtube"
-					style="width: 30px; height: 30px" />
-			</a>
+			<!-- <div id="hover-message">Background Video</div> -->
+				<a
+					href="https://www.youtube.com/watch?v=V_MX0HiIgRQ"
+					target="_blank">
+					<img
+						src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4yLpMDVXF1uwVj7yorM0kmbW1rIGROqpweA&usqp=CAU"
+						alt="Youtube"
+						style="width: 30px; height: 30px" />
+				</a>
 		</footer>
 	</body>
 	<script>
@@ -258,7 +264,6 @@
 			event.target.mute(); // Mute the video
 			event.target.playVideo(); // Start playing the video
 		}
-		
 	</script>
 	<script src="https://www.youtube.com/iframe_api"></script>
 </html>
