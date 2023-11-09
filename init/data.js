@@ -92,7 +92,7 @@ const questions = [
 			"Gathering powerful jutsu",
 		],
 		answer: "Capture the tailed beasts",
-		url: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fanimecorner.me%2Fwp-content%2Fuploads%2F2021%2F08%2Flove-after-world-domination-teaser-pv.png&f=1&nofb=1&ipt=964465d2b827f863e35a42ef2eba22dad067b0d12fbc4afa1e0784d24479fbbe&ipo=images",
+		url: "https://cdn.shopify.com/s/files/1/0046/2779/1960/files/membres_de_l_akatsuki.jpg?v=1583169371",
 	},
 ];
 
