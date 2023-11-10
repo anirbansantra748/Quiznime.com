@@ -4,6 +4,7 @@ const path = require("path");
 const session = require("express-session");
 const quizData = require("./init/data.js");
 const quizData2 = require("./init/data2.js");
+const ejsMate = require("ejs-mate");
 
 const app = express();
 const port = 3000;
@@ -11,6 +12,7 @@ const mongo_url = "mongodb://127.0.0.1:27017/Quizanime";
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
+app.engine('ejs', ejsMate);
 
 app.use(express.urlencoded({ extended: true }));
 app.use(
@@ -123,6 +125,10 @@ app.post("/quizanime/page2", (req, res) => {
   req.session.currQuestion += 1;
   res.redirect("/quizanime/page2");
 });
+
+app.get("*",(req,res)=>{
+  res.send("page not found")
+})
 
 app.listen(port, () => {
   console.log("App is listening on port " + port);

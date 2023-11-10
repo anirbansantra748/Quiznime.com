@@ -36,13 +36,35 @@
         border-radius: 5px;
         margin-top: 20px;
       }
-
+      .back-button {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: #FFA500; /* Orange background color for the back button */
+        color: white;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        transition: background-color 0.3s;
+      }
+  
+      .back-button:hover {
+        background-color: #FF7F00; /* Darker orange on hover */
+      }
+  
       .button:hover {
         background-color: #45a049;
       }
     </style>
   </head>
   <body>
+    <a href="/quizanime/home" class="back-button">&#9664;</a> 
     <div class="container">
       <h1>Quiz Result</h1>
       <div class="result">Congratulations! You have completed the quiz.</div>

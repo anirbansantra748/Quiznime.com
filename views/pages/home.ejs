@@ -89,6 +89,8 @@
 				background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpaperaccess.com%2Ffull%2F3279992.jpg&f=1&nofb=1&ipt=18bbcced36c04b8e49a9103172760561edda10c5ab34c155a657fc00dba488f4&ipo=images");
 				background-size: cover;
 				background-position: center;
+				position: relative;
+				margin-left: 50%;
 			}
 
 			.card2 {
@@ -192,33 +194,43 @@
 				height: 10px;
 				background-color: lightblue;
 			} */
+			@media (max-width: 767px) {
+				.card-container {
+						flex-direction: column;
+						align-items: center;
+				}
+
+				.card {
+						width: 80%;
+						margin: 20px 0;
+				}
+		}
 		</style>
 	</head>
 
-	<body>
-		<div id="player"></div>
-		<div class="content">
-			<h1 class="main-heading">Choose Your Quiz</h1>
-			<div class="card-container">
-				<a href="/quizanime/page1">
-					<div class="card card1">
-						<div class="card-content">
-							<h3>Character From Image</h3>
-							<button class="card-button">Start Quiz</button>
-						</div>
-					</div>
-				</a>
+	<div id="player"></div>
+    <div class="content">
+        <h1 class="main-heading">Choose Your Quiz</h1>
+        <div class="card-container">
+            <a href="/quizanime/page1" class="col-sm-12 col-md-6">
+                <div class="card card1">
+                    <div class="card-content">
+                        <h3>Character From Image</h3>
+                        <button class="card-button">Start Quiz</button>
+                    </div>
+                </div>
+            </a>
 
-				<a href="/quizanime/page2">
-					<div class="card card2">
-						<div class="card-content">
-							<h3>Anime name from Characters</h3>
-							<button class="card-button">Start Quiz</button>
-						</div>
-					</div>
-				</a>
-			</div>
-		</div>
+            <a href="/quizanime/page2" class="col-sm-12 col-md-6 ">
+                <div class="card card2">
+                    <div class="card-content">
+                        <h3>Anime name from Characters</h3>
+                        <button class="card-button">Start Quiz</button>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
 		<footer class="footer">
 			<!-- <div id="hover-message">Background Video</div> -->
 				<a
